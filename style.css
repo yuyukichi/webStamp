@@ -1,133 +1,143 @@
-@charset "utf-8";
+@charset "UTF-8";
 .stampCount {
-    display: flex;
-    position: absolute;
-    top: 92.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 89%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 920px) {
+  .stampCount {
+    top: 80%;
+    width: 90vw;
+    font-size: 10px;
+  }
 }
 
 .stamp {
-    background-image: url("./madia/stamp.png");
-    background-size: 100% 100%;
-    font-size: 0px;
+  background-image: url("./madia/stamp.png");
+  background-size: 100% 100%;
+  font-size: 0px;
 }
 
 .todayStamp {
-    background-image: url("./madia/stamp.png");
-    background-size: 100% 100%;
-    font-size: 0px;
-    background-color: #D65E72;
+  background-image: url("./madia/stamp.png");
+  background-size: 100% 100%;
+  font-size: 0px;
+  background-color: #d65e72;
 }
 
-
 /*全体*/
-
 .wrapper {
-    max-width: 650px;
-    height: 500px;
-    margin: 0 auto;
-    color: #666;
+  max-width: 650px;
+  height: 500px;
+  margin: 0 auto;
+  color: #666;
+}
+
+@media (max-width: 920px) {
+  .wrapper {
+    width: 100vw;
+    height: 40vh;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 
 #header {
-    text-align: center;
-    font-size: 24px;
-    width: 100%;
-    margin: 1rem 0;
+  text-align: center;
+  font-size: 24px;
+  width: 100%;
+  margin: 1rem 0;
 }
 
-
 /*カレンダー*/
-
 #calendar {
-    text-align: center;
-    width: 100%;
-    height: 100%;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 table {
-    outline: 2px solid #ddd;
-    border-collapse: collapse;
-    width: 100%;
-    height: 100%;
+  outline: 2px solid #ddd;
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
 }
 
 th {
-    color: #000;
+  color: #000;
 }
 
 th,
 td {
-    outline: 1px solid #ddd;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
+  outline: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
 }
-
 
 /*日曜日*/
-
 td:first-child {
-    color: red;
+  color: red;
 }
-
 
 /*土曜日*/
-
 td:last-child {
-    color: blue;
+  color: blue;
 }
-
 
 /*前後月の日付*/
-
 td.disabled {
-    color: #ccc;
+  color: #ccc;
 }
 
-
 /*本日*/
-
 td.today {
-    background-color: #D65E72;
-    color: #fff;
+  background-color: #d65e72;
+  color: #fff;
 }
 
 td.today:hover {
-    background-image: url("./madia/stamp.png");
-    background-size: 100% 100%;
-    opacity: 40%;
-    font-size: 0px;
+  background-image: url("./madia/stamp.png");
+  background-size: 100% 100%;
+  opacity: 40%;
+  font-size: 0px;
 }
 
-
 /*ボタン*/
-
 #next-prev-button {
-    position: relative;
+  position: relative;
 }
 
 #next-prev-button button {
-    cursor: pointer;
-    background: #B78D4A;
-    color: #fff;
-    border: 1px solid #B78D4A;
-    border-radius: 4px;
-    font-size: 1rem;
-    padding: 0.5rem 2rem;
-    margin: 1rem 0;
+  cursor: pointer;
+  background: #b78d4a;
+  color: #fff;
+  border: 1px solid #b78d4a;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  margin: 1rem 0;
 }
 
 #next-prev-button button:hover {
-    background-color: #D4BB92;
-    border-color: #D4BB92;
+  background-color: #d4bb92;
+  border-color: #d4bb92;
 }
 
 #prev {
-    float: left;
+  float: left;
 }
 
 #next {
-    float: right;
+  float: right;
 }
+/*# sourceMappingURL=style.css.map */
