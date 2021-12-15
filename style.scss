@@ -21,14 +21,14 @@ $sp: 480px; // スマホ
 }
 
 .stampCount {
-    display: flex;
     position: absolute;
     top: 89%;
     left: 50%;
     transform: translate(-50%, -50%);
     @include tab {
+        display: block;
         top: 80%;
-        left: 47%;
+        left: 70%;
         width: 90vw;
         font-size: 10px;
     }
@@ -38,6 +38,10 @@ $sp: 480px; // スマホ
     background-image: url("./madia/stamp.png");
     background-size: 100% 100%;
     font-size: 0px;
+}
+
+.stamps {
+    display: flex;
 }
 
 .todayStamp {
