@@ -118,6 +118,12 @@ function stampClick() {
             const number = days.length + 1;
             document.getElementById("num").innerHTML = "×" + number
             oneStamp = false;
+            if ("13" in stamps) {
+
+            } else {
+                document.getElementById("num").innerHTML = "✕" + 4
+            }
+
         } else {
             console.log("既に設定されています！！")
         }
