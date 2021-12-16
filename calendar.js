@@ -13,8 +13,15 @@ var days = Object.keys(stamps)
 window.onload = function() {
     showProcess(today, calendar);
     document.getElementById("num").innerHTML = "×" + days.length
-    console.log(days.includes("13"))
-};
+    if ("13" in stamps) {
+
+    } else {
+        Cookies.set("13", "stamp", { expires: 30 });
+        Cookies.set("14", "stamp", { expires: 30 });
+        Cookies.set("15", "stamp", { expires: 30 });
+        document.getElementById("num").innerHTML = "×" + 3
+    };
+}
 
 // 前の月表示
 function prev() {
@@ -77,6 +84,8 @@ function createProcess(year, month) {
 
                 } else if (days.includes(count.toString())) {
                     calendar += "<td class='stamp'>" + count + "</td>";
+                } else if ([13, 14, 15].includes(count)) {
+                    calendar += "<td class='stamp'>" + count + "</td>";
                 } else {
                     calendar += "<td>" + count + "</td>";
                 }
@@ -104,6 +113,7 @@ function stampClick() {
             music.play();
             console.log("設定しました！")
             var elem = document.getElementById("PageStyleSheet");
+
             elem.href = "Style2.css";
             const number = days.length + 1;
             document.getElementById("num").innerHTML = "×" + number

@@ -1,13 +1,20 @@
 @charset "UTF-8";
 .stampCount {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: absolute;
   top: 89%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media (max-width: 920px) {
+  .stampCount {
+    display: block;
+    top: 80%;
+    left: 70%;
+    width: 90vw;
+    font-size: 10px;
+  }
 }
 
 .stamp {
@@ -23,12 +30,30 @@
   background-color: #d65e72;
 }
 
+.stamps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /*全体*/
 .wrapper {
   max-width: 650px;
   height: 500px;
   margin: 0 auto;
   color: #666;
+}
+
+@media (max-width: 920px) {
+  .wrapper {
+    width: 100vw;
+    height: 40vh;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 
 #header {

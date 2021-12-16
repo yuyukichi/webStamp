@@ -1,4 +1,7 @@
 @charset "utf-8";
+$pc: 920px; // PC
+$tab: 920px; // タブレット
+$sp: 480px; // スマホ
 @mixin pc {
     @media (min-width: ($pc)) {
         @content;
@@ -18,7 +21,6 @@
 }
 
 .stampCount {
-    display: flex;
     position: absolute;
     top: 89%;
     left: 50%;
@@ -26,7 +28,7 @@
     @include tab {
         display: block;
         top: 80%;
-        left: 47%;
+        left: 70%;
         width: 90vw;
         font-size: 10px;
     }
@@ -43,6 +45,10 @@
     background-size: 100% 100%;
     font-size: 0px;
     background-color: #d65e72;
+}
+
+.stamps {
+    display: flex;
 }
 
 
